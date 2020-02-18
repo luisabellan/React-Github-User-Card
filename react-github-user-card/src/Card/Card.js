@@ -1,9 +1,8 @@
 import React from 'react'
 import axios from 'axios'
-import './App.css';
-import Card from './Card/Card'
+import './Card.css';
 
-class App extends React.Component {
+class Card extends React.Component {
   constructor() {
     console.log('constructor is getting called')
     super()
@@ -62,22 +61,28 @@ class App extends React.Component {
 
   }
 
-  render() {
-    //console.log(this.state.user)
+  render(props) {
+    console.log(props)
 
     return (
 
 
-      <div className="container">
-        <div className="header">
-          <img src="../assets/lambdalogo.png" alt="Lambda Logo" />
-          <p>❤️'s</p>
-          <img src="../../react-github-user-card/assets/lambdalogo.png" alt="GitHub Logo" />
-        </div>
-       <Card />
-        <div class="cards"></div>
-      </div>
+     
+        <div className="card" >
 
+
+          <img src={this.state.image} alt="me" />
+          <div className="card-info">
+            <h3 className="name">{this.state.name}</h3>
+            <p className="username">{this.state.userName}</p>
+            <p>Location: {this.state.location}</p>
+            <p>Profile: <a href={this.state.url}>{this.state.url}</a>
+            </p>
+            <p>Followers: {this.state.followers}</p>
+            <p>Following: {this.state.following}</p>
+            <p>Bio: {this.state.bio}</p>
+          </div>
+        </div>
 
     )
 
@@ -87,4 +92,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Card;

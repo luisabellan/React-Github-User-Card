@@ -12,7 +12,8 @@ const getUsers = () => {
 
 
 }
-  fetch('https://api.github.com/users/squarerobin')
+axios
+  .get('https://api.github.com/users/squarerobin')
   .then((res) => {
     // this probably returns a 200 status code
     console.log(res)
