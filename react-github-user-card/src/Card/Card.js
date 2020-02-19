@@ -4,10 +4,10 @@ import './Card.css';
 
 class Card extends React.Component {
   constructor() {
-    console.log('constructor is getting called')
     super()
+    console.log('constructor is getting called')
+   // console.log(this.props)
     this.state = {
-
       name: "",
       image: "",
       userName: "",
@@ -26,10 +26,10 @@ class Card extends React.Component {
     console.log('componentDidMount is getting called')
 
     axios
-      .get("https://api.github.com/users/squarerobin")
+      .get(`https://api.github.com/users/squarerobin`)
       .then(res => {
         // this probably returns a 200 status code
-        console.log(res.data)
+       console.log(res.data)
 
         this.setState({
 
@@ -61,8 +61,8 @@ class Card extends React.Component {
 
   }
 
-  render(props) {
-    console.log(props)
+  render() {
+    //console.log()
 
     return (
 
