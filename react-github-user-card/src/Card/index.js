@@ -13,7 +13,7 @@ const getUsers = () => {
 
 }
 axios
-  .get('https://api.github.com/users/squarerobin')
+  .get('https://api.github.com/users/luisabellan')
   .then((res) => {
     // this probably returns a 200 status code
     console.log(res)
@@ -84,7 +84,7 @@ const followersArray = []
 
 // STRETCH: get followers programmatically
 axios
-  .get(`https://api.github.com/users/squarerobin/followers`)
+  .get(`https://api.github.com/users/luisabellan/followers`)
   .then((res) => {
     // console.log(res.data)
     for (let i = 0; i < res.data.length; i++) {

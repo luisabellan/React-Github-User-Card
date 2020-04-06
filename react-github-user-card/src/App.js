@@ -4,19 +4,30 @@ import Card from "./Card/Card";
 import Cards from "./Cards/Cards";
 
 class App extends React.Component {
-  constructor() {
+  constructor(props) {
     console.log('constructor is getting called')
-    super()
+    super(props)
     this.state = {
+      follower: {
 
-      name: "",
-      image: "",
-      userName: "",
-      location: "",
-      url: "",
-      followers: "",
-      following: "",
-      bio: "",
+        name: "",
+        image: "",
+        userName: "luisabellan",
+        location: "",
+        url: "",
+        followers: "",
+        following: "",
+        bio: "",
+
+      },
+      followersArray:[]  
+    
+
+      
+
+     
+
+      
     }
   }
 
@@ -36,17 +47,15 @@ class App extends React.Component {
             <span aria-label="heart" role="img">
               ❤️
             </span>
-            's
           </p>
           <div className="right-logo">
             <img className="github-logo" alt="GitHub Logo" />
           </div>
         </div>
-        <Card />
-        <Cards />
-        <div className="cards"></div>
+        <Card userName={this.state.follower.userName}/>
+        <Cards className="cards" followers={this.state.followersArray} />
       </div>
-    )
+    );
   }
 }
 
