@@ -26,14 +26,12 @@ class Card extends React.Component {
     console.log('componentDidMount is getting called')
 
     axios
-      .get(`https://api.github.com/users/squarerobin`)
+      .get(`https://api.github.com/users/luisabellan`)
       .then(res => {
         // this probably returns a 200 status code
        console.log(res.data)
 
         this.setState({
-
-
 
           name: res.data.name,
           image: res.data.avatar_url,
