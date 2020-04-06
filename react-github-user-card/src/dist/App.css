@@ -76,8 +76,6 @@ body {
 
 .header {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,12 +85,12 @@ body {
 .header .logo-left {
   height: 10rem;
   width: 10rem;
+  object-fit: contain;
 }
 
 .header .logo-left img.lambda-logo {
-  background-color: dodgerblue;
-  width: 100%;
-  height: 100%;
+  width: 10rem;
+  height: 10rem;
   object-fit: contain;
 }
 
