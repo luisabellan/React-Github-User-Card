@@ -26,7 +26,7 @@ class Card extends React.Component {
         // this probably returns a 200 status code
         console.log(res.data);
         this.setState({
-            followers : res.data
+            followers : [...res.data]
         })
       })
 
