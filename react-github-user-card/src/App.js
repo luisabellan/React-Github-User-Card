@@ -1,6 +1,6 @@
 import React from "react";
 import axios from 'axios';
-import "./App.css";
+import "./App.scss";
 import Card from "./Card/Card.js";
 import Cards from "./Cards/Cards.js";
 
