@@ -76,60 +76,15 @@ class App extends React.Component {
               // this probably returns either a 400 or 500 status code
               console.log('You hit an error: ', err);
             });
-        }
-
-
-      })
-
-      .catch((err) => {
-        // this probably returns either a 400 or 500 status code
-        console.log('You hit an error: ', err);
-      });
-
-    console.log(this.state.followersArray)
-
-
-
-    axios
-      .get(`https://api.github.com/users/${this.state.follower.userName}`)
-      .then(res => {
-        // this probably returns a 200 status code
-        console.log(res.data);
-        const follower = {
-          name: res.data.name,
-          image: res.data.avatar_url,
-          userName: res.data.userName,
-          location: res.data.location,
-          url: res.data.url,
-          followers: res.data.followers,
-          following: res.data.following,
-          bio: res.data.bio
-        }
-
-        this.setState({
-
-          follower: {
-            name: res.data.name,
-            image: res.data.avatar_url,
-            userName: res.data.userName,
-            location: res.data.location,
-            url: res.data.url,
-            followers: res.data.followers,
-            following: res.data.following,
-            bio: res.data.bio
           }
-
-
-        });
-      })
-
-      .catch(err => {
-        // this probably returns either a 400 or 500 status code
-        console.log("You hit an error: ", err);
-      });
-  }
-
-
+        })}
+  
+   
+  
+      
+   
+  
+    
 
   render() {
     //console.log(this.state.user)
