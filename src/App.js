@@ -34,7 +34,7 @@ class App extends React.Component {
       .then((res) => {
         // console.log(res.data)
         for (let i = 0; i < res.data.length; i++) {
-
+          console.log(res.data[i].login)
           this.state.followersArray.push(res.data[i].login)
 
         }
