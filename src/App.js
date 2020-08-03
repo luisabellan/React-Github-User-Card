@@ -71,15 +71,6 @@ class App extends React.Component {
 
 
 
-
-
-
-
-
-
-
-
-
             })
             .catch((err) => {
               // this probably returns either a 400 or 500 status code
@@ -163,8 +154,8 @@ class App extends React.Component {
           </div>
         </div>
         <Card className="card" userName="luisabellan" />
-        <Cards className="cards" followers={this.state.followersArray} /> */}
-              </div>
+        <Cards className="cards" followers={this.state.followersArray} />
+      </div>
     );
   }
 }
